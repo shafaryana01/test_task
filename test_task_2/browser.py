@@ -8,6 +8,3 @@ class Browser:
 
     def open_url(self, url):
         self.driver.get(url)
-
-    def maximize_window(self):
-        self.driver.maximize_window()

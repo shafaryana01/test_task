@@ -6,12 +6,12 @@ from test_task_2.pages.main_page import MainPage
 from test_task_2.pages.radio_button_page import RadioButtonPage
 
 
-class TaskTest:
+class Task2:
     main_page = MainPage()
     check_box_page = CheckBoxPage()
     radio_button_page = RadioButtonPage()
 
-    def task_test(self):
+    def task_2(self):
         self.main_page.scroll_to_element()
         self.main_page.select_category()
         self.check_box_page.left_menu.select_category(config.CHECK_BOX)
@@ -23,5 +23,5 @@ class TaskTest:
 
 if __name__ == "__main__":
     Browser().open_url(config.URL)
-    TaskTest().task_test()
+    Task2().task_2()
     Driver.quit()

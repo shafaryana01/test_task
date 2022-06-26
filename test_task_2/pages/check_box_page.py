@@ -1,4 +1,3 @@
-from test_task_2.driver import Driver
 from test_task_2.pages.base_page import BasePage
 from test_task_2.pages.left_menu import LeftMenu
 
