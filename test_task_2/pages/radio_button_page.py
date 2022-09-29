@@ -1,12 +1,13 @@
 from test_task_2.pages.base_page import BasePage
+from test_task_2.pages.left_menu import LeftMenu
 
 
 class RadioButtonPage(BasePage):
-    IMPRESSIVE_LOCATOR = "//input[@id='impressiveRadio']"
-    YES_LOCATOR = "//input[@id='yesRadio']"
+    RADIO_BUTTON_LOCATOR = "//input[@id='{}']"
 
-    def choose_impressive(self):
-        self.click_with_java_script(self.IMPRESSIVE_LOCATOR)
+    def __init__(self):
+        self.left_menu = LeftMenu()
+        super().__init__()
 
-    def choose_yes(self):
-        self.click_with_java_script(self.YES_LOCATOR)
+    def choose_button(self, name):
+        self.click_with_java_script(self.RADIO_BUTTON_LOCATOR.format(name))
